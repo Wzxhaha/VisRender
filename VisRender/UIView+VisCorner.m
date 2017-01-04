@@ -13,17 +13,17 @@
 
 - (void)vis_setCornerRadius:(CGFloat)cornerRadius size:(CGSize)size color:(UIColor *)color identifier:(NSString *)identifier {
     dispatch_async(dispatch_queue_create("com.vis.corner.queue", NULL), ^{
-        CGFloat use_cornerRadius = cornerRadius;
+        CGFloat useCornerRadius = cornerRadius;
         CGFloat maxCornerRadius = MAX(size.width, size.height)/2.0;
-        if (use_cornerRadius > maxCornerRadius) {
-            use_cornerRadius = maxCornerRadius;
+        if (useCornerRadius > maxCornerRadius) {
+            useCornerRadius = maxCornerRadius;
         }
         
         UIBezierPath * bezierPath = [[NSCache vis_cache] objectForKey: identifier];
         if (!bezierPath) {
             CGMutablePathRef path = CGPathCreateMutable();
             CGPathAddRect(path, nil, (CGRect){CGPointZero, size});
-            CGPathAddRoundedRect(path, nil, (CGRect){CGPointZero, size}, cornerRadius, cornerRadius);
+            CGPathAddRoundedRect(path, nil, (CGRect){CGPointZero, size}, useCornerRadius, useCornerRadius);
             bezierPath = [UIBezierPath bezierPathWithCGPath:path];
             [[NSCache vis_cache] setObject:bezierPath forKey:identifier];
         }
@@ -33,7 +33,7 @@
             layer.path = bezierPath.CGPath;
             layer.fillColor = color.CGColor;
             layer.fillRule = kCAFillRuleEvenOdd;
-            [self.layer insertSublayer:layer atIndex:0];
+            [self.layer addSublayer:layer];
         });
     });
 }
