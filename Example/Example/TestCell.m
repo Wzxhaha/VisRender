@@ -9,7 +9,7 @@
 
 #import "TestCell.h"
 #import "Masonry.h"
-#import "UIView+VisCorner.h"
+#import "UIView+VisRender.h"
 @implementation TestCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {

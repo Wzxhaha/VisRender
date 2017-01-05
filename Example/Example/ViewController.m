@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "UIView+VisCorner.h"
+#import "UIView+VisRender.h"
 #import "TestCell.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>

@@ -1,3 +1,4 @@
+
 //
 //  NSCache+VisCorner.m
 //  VisCorner
@@ -6,9 +7,9 @@
 //  Copyright © 2017年 wzxjiang. All rights reserved.
 //
 
-#import "NSCache+VisCorner.h"
+#import "NSCache+VisRender.h"
 
-@implementation NSCache (VisCorner)
+@implementation NSCache (VisRender)
 
 + (instancetype)vis_cache {
     static NSCache * vis_cache = nil;

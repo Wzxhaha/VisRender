@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (VisCorner)
+@interface UIView (VisRender)
 
 - (void)vis_setCornerRadius:(CGFloat)cornerRadius
                        size:(CGSize)size
                       color:(UIColor *)color
                  identifier:(NSString *)identifier;
+
+//TODO: - shadow
+//- (void)vis_shadowWithCornerRadius:(CGFloat)cornerRadius
+//                              size:(CGSize)size;
 
 @end

@@ -13,8 +13,8 @@
 		1E00FB081E1D0456004CAFDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E00FB061E1D0456004CAFDB /* Main.storyboard */; };
 		1E00FB0A1E1D0456004CAFDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E00FB091E1D0456004CAFDB /* Assets.xcassets */; };
 		1E00FB0D1E1D0456004CAFDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E00FB0B1E1D0456004CAFDB /* LaunchScreen.storyboard */; };
-		1E00FB191E1D04A4004CAFDB /* NSCache+VisCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E00FB161E1D04A4004CAFDB /* NSCache+VisCorner.m */; };
-		1E00FB1A1E1D04A4004CAFDB /* UIView+VisCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E00FB181E1D04A4004CAFDB /* UIView+VisCorner.m */; };
+		1E00FB191E1D04A4004CAFDB /* NSCache+VisRender.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E00FB161E1D04A4004CAFDB /* NSCache+VisRender.m */; };
+		1E00FB1A1E1D04A4004CAFDB /* UIView+VisRender.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E00FB181E1D04A4004CAFDB /* UIView+VisRender.m */; };
 		1E00FB351E1D04B0004CAFDB /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E00FB1D1E1D04AF004CAFDB /* MASCompositeConstraint.m */; };
 		1E00FB361E1D04B0004CAFDB /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E00FB201E1D04AF004CAFDB /* MASConstraint.m */; };
 		1E00FB371E1D04B0004CAFDB /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E00FB221E1D04AF004CAFDB /* MASConstraintMaker.m */; };
@@ -40,10 +40,10 @@
 		1E00FB091E1D0456004CAFDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E00FB0C1E1D0456004CAFDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E00FB0E1E1D0456004CAFDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1E00FB151E1D04A4004CAFDB /* NSCache+VisCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCache+VisCorner.h"; sourceTree = "<group>"; };
-		1E00FB161E1D04A4004CAFDB /* NSCache+VisCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCache+VisCorner.m"; sourceTree = "<group>"; };
-		1E00FB171E1D04A4004CAFDB /* UIView+VisCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+VisCorner.h"; sourceTree = "<group>"; };
-		1E00FB181E1D04A4004CAFDB /* UIView+VisCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+VisCorner.m"; sourceTree = "<group>"; };
+		1E00FB151E1D04A4004CAFDB /* NSCache+VisRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCache+VisRender.h"; sourceTree = "<group>"; };
+		1E00FB161E1D04A4004CAFDB /* NSCache+VisRender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCache+VisRender.m"; sourceTree = "<group>"; };
+		1E00FB171E1D04A4004CAFDB /* UIView+VisRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+VisRender.h"; sourceTree = "<group>"; };
+		1E00FB181E1D04A4004CAFDB /* UIView+VisRender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+VisRender.m"; sourceTree = "<group>"; };
 		1E00FB1C1E1D04AF004CAFDB /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		1E00FB1D1E1D04AF004CAFDB /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
 		1E00FB1E1E1D04AF004CAFDB /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -133,10 +133,10 @@
 		1E00FB141E1D04A4004CAFDB /* VisRender */ = {
 			isa = PBXGroup;
 			children = (
-				1E00FB151E1D04A4004CAFDB /* NSCache+VisCorner.h */,
-				1E00FB161E1D04A4004CAFDB /* NSCache+VisCorner.m */,
-				1E00FB171E1D04A4004CAFDB /* UIView+VisCorner.h */,
-				1E00FB181E1D04A4004CAFDB /* UIView+VisCorner.m */,
+				1E00FB151E1D04A4004CAFDB /* NSCache+VisRender.h */,
+				1E00FB161E1D04A4004CAFDB /* NSCache+VisRender.m */,
+				1E00FB171E1D04A4004CAFDB /* UIView+VisRender.h */,
+				1E00FB181E1D04A4004CAFDB /* UIView+VisRender.m */,
 			);
 			name = VisRender;
 			path = ../../VisRender;
@@ -250,7 +250,7 @@
 				1E00FB3C1E1D04B0004CAFDB /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				1E00FB051E1D0456004CAFDB /* ViewController.m in Sources */,
 				1E00FB3A1E1D04B0004CAFDB /* MASViewConstraint.m in Sources */,
-				1E00FB191E1D04A4004CAFDB /* NSCache+VisCorner.m in Sources */,
+				1E00FB191E1D04A4004CAFDB /* NSCache+VisRender.m in Sources */,
 				1E00FB021E1D0456004CAFDB /* AppDelegate.m in Sources */,
 				1E00FAFF1E1D0456004CAFDB /* main.m in Sources */,
 				1E00FB3D1E1D04B0004CAFDB /* View+MASAdditions.m in Sources */,
@@ -262,7 +262,7 @@
 				1E00FB3E1E1D04B0004CAFDB /* ViewController+MASAdditions.m in Sources */,
 				1E00FB361E1D04B0004CAFDB /* MASConstraint.m in Sources */,
 				1E00FB381E1D04B0004CAFDB /* MASLayoutConstraint.m in Sources */,
-				1E00FB1A1E1D04A4004CAFDB /* UIView+VisCorner.m in Sources */,
+				1E00FB1A1E1D04A4004CAFDB /* UIView+VisRender.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
