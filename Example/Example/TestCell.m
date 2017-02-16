@@ -28,7 +28,7 @@
         make.size.mas_equalTo(CGSizeMake(30, 30));
     }];
     
-    [_imgView vis_setCornerRadius:15 size:CGSizeMake(30, 30) color:[UIColor whiteColor] identifier:@"vis_test_cell"];
+    [_imgView vis_setCornerRadius:15 size:CGSizeMake(30, 30) color:[UIColor whiteColor]];
 }
 
 @end

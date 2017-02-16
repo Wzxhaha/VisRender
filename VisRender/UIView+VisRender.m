@@ -11,13 +11,15 @@
 
 @implementation UIView (VisRender)
 
-- (void)vis_setCornerRadius:(CGFloat)cornerRadius size:(CGSize)size color:(UIColor *)color identifier:(NSString *)identifier {
+- (void)vis_setCornerRadius:(CGFloat)cornerRadius size:(CGSize)size color:(UIColor *)color {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         CGFloat useCornerRadius = cornerRadius;
         CGFloat maxCornerRadius = MAX(size.width, size.height)/2.0;
         if (useCornerRadius > maxCornerRadius) {
             useCornerRadius = maxCornerRadius;
         }
+        
+        NSString * identifier = [NSString stringWithFormat:@"vis.radius%f_size(%f,%f)_color%lu", cornerRadius, size.width, size.height, (unsigned long)color.hash];
         
         UIBezierPath * bezierPath = [[NSCache vis_cache] objectForKey: identifier];
         if (!bezierPath) {

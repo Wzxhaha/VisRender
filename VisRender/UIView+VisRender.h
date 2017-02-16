@@ -12,8 +12,7 @@
 
 - (void)vis_setCornerRadius:(CGFloat)cornerRadius
                        size:(CGSize)size
-                      color:(UIColor *)color
-                 identifier:(NSString *)identifier;
+                      color:(UIColor *)color;
 
 //TODO: - shadow
 //- (void)vis_shadowWithCornerRadius:(CGFloat)cornerRadius
